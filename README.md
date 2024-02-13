@@ -1,9 +1,14 @@
-## Chat App
+## Chat App 💬
 
 <p>
 🌟 Welcome to our innovative chat application, where cutting-edge technology meets seamless communication! Built on the powerful MERN stack, enhanced with Socket.io, styled with TailwindCSS and Daisy UI, our app offers a comprehensive suite of features designed to elevate your messaging experience. Let's dive into the functionalities:
 </p>
 
+### 🔗 Hosted Link : https://pine-wheather-app.netlify.app
+<br/>
+
+### 🖼 Image :
+<img src="./image/ChatApp.png"  width="680" height="450" >
 
 ##  🔑 Key Features :
 
