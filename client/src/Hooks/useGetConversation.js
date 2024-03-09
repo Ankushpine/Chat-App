@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { token } from "./useSignIn";
 
 const useGetConversations = () => {
   const [loading, setLoading] = useState(false);
   const [conversations, setConversations] = useState([]);
   const url = import.meta.env.VITE_APP_URL;
 
-  const token = localStorage.getItem("jwt");
+  // const token = localStorage.getItem("jwt");
 
   useEffect(() => {
     const getConversations = async () => {

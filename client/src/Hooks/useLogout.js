@@ -22,7 +22,7 @@ const useLogout = () => {
       }
 
       localStorage.removeItem("chat-user");
-      localStorage.removeItem("jwt");
+      // localStorage.removeItem("jwt");
       setAuthUser(null);
       toast.success("Successfully Signed Out!");
     } catch (error) {

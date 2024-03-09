@@ -3,6 +3,8 @@ import toast from "react-hot-toast";
 import { useAuthContext } from "../context/AuthContext";
 const url = import.meta.env.VITE_APP_URL;
 
+export let token ;
+
 const useSignIn = () => {
   const [loading, setLoading] = useState(false);
   const { setAuthUser } = useAuthContext();
@@ -23,7 +25,9 @@ const useSignIn = () => {
 
       const data = await res.json();
 
-      localStorage.setItem("jwt", data.token);
+      // localStorage.setItem("jwt", data.token);
+
+      token = data.token;
 
       if (data.error) {
         throw new Error(data.error);
@@ -47,6 +51,9 @@ const useSignIn = () => {
   return { loading, SignIn };
 };
 export default useSignIn;
+
+
+
 
 function handleInputErrors(userName, password) {
   if (!userName || !password) {

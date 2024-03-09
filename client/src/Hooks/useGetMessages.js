@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useConversation from "../zustand/useConversation";
 import toast from "react-hot-toast";
+import { token } from "./useSignIn";
 
 const useGetMessages = () => {
 	const [loading, setLoading] = useState(false);
@@ -16,7 +17,7 @@ const useGetMessages = () => {
                     method: "get",
                     headers: {
                         "Content-Type": "application/json",
-                        'Authorization': `Bearer ${localStorage.getItem("jwt")}`
+                        'Authorization': `Bearer ${token}`
                     }
                  } );
 				const data = await res.json();

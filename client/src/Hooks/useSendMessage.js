@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useConversation from "../zustand/useConversation";
 import toast from "react-hot-toast";
+import { token } from "./useSignIn";
 
 const useSendMessage = () => {
 	const [loading, setLoading] = useState(false);
@@ -14,7 +15,7 @@ const useSendMessage = () => {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
-                    'Authorization': `Bearer ${localStorage.getItem("jwt")}`
+                    'Authorization': `Bearer ${token}`
 				},
 				body: JSON.stringify({ message }),
 			});
